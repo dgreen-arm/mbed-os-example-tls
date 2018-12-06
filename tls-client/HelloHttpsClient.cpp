@@ -226,7 +226,7 @@ int HelloHttpsClient::configureTCPSocket()
 {
     int ret;
 
-    NetworkInterface *network = NetworkInterface::get_default_instance();
+    NetworkInterface *network = EthInterface::get_default_instance();
     if(network == NULL) {
         mbedtls_printf("ERROR: No network interface found!\n");
         return -1;
