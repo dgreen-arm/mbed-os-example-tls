@@ -11,7 +11,7 @@ You can also compile this example with the [Mbed Online Compiler](https://os.mbe
 ## Requirements
 
 This example uses by default an Ethernet connection to the internet.
-It's possible to switch to another network interface by using [Easy Connect](https://github.com/ARMmbed/easy-connect/blob/master/README.md). The [Mbed OS Example Client](https://github.com/ARMmbed/mbed-os-example-client#application-setup) application shows an example of how to configure other network interfaces.
+It's possible to switch to another network interface, please see the [Mbed OS documentation](https://os.mbed.com/docs/v5.11/apis/network-interfaces.html) on how this is done. The [Mbed OS Cloud Client](https://github.com/ARMmbed/mbed-cloud-client-example) application shows an example of how to configure other network interfaces.
 
 The networking stack used in this example requires TLS functionality to be enabled on Mbed TLS. On devices where hardware entropy is not present, TLS is disabled by default. This would result in compile time or linking failures.
 
