@@ -1446,36 +1446,36 @@ int main()
 //     }
 // #endif /* MBEDTLS_HMAC_DRBG_C */
 
-// #if defined(MBEDTLS_RSA_C) && \
-//     defined(MBEDTLS_PEM_PARSE_C) && defined(MBEDTLS_PK_PARSE_C)
-//     if (benchmark_rsa() != 0) {
-//         exit_code = MBEDTLS_EXIT_FAILURE;
-//     }
-// #endif /* MBEDTLS_RSA_C && MBEDTLS_PEM_PARSE_C && MBEDTLS_PK_PARSE_C */
+#if defined(MBEDTLS_RSA_C) && \
+    defined(MBEDTLS_PEM_PARSE_C) && defined(MBEDTLS_PK_PARSE_C)
+    if (benchmark_rsa() != 0) {
+        exit_code = MBEDTLS_EXIT_FAILURE;
+    }
+#endif /* MBEDTLS_RSA_C && MBEDTLS_PEM_PARSE_C && MBEDTLS_PK_PARSE_C */
 
-// #if defined(MBEDTLS_DHM_C) && defined(MBEDTLS_BIGNUM_C)
-//     if (benchmark_dhm() != 0) {
-//         exit_code = MBEDTLS_EXIT_FAILURE;
-//     }
-// #endif /* MBEDTLS_DHM_C && MBEDTLS_BIGNUM_C */
+#if defined(MBEDTLS_DHM_C) && defined(MBEDTLS_BIGNUM_C)
+    if (benchmark_dhm() != 0) {
+        exit_code = MBEDTLS_EXIT_FAILURE;
+    }
+#endif /* MBEDTLS_DHM_C && MBEDTLS_BIGNUM_C */
 
-// #if defined(MBEDTLS_ECDSA_C) && defined(MBEDTLS_SHA256_C)
-//     if (benchmark_ecdsa() != 0) {
-//         exit_code = MBEDTLS_EXIT_FAILURE;
-//     }
-// #endif /* MBEDTLS_ECDSA_C && MBEDTLS_SHA2565_C */
+#if defined(MBEDTLS_ECDSA_C) && defined(MBEDTLS_SHA256_C)
+    if (benchmark_ecdsa() != 0) {
+        exit_code = MBEDTLS_EXIT_FAILURE;
+    }
+#endif /* MBEDTLS_ECDSA_C && MBEDTLS_SHA2565_C */
 
-// #if defined(MBEDTLS_ECDH_C)
-//     if (benchmark_ecdh() != 0) {
-//         exit_code = MBEDTLS_EXIT_FAILURE;
-//     }
+#if defined(MBEDTLS_ECDH_C)
+    if (benchmark_ecdh() != 0) {
+        exit_code = MBEDTLS_EXIT_FAILURE;
+    }
 
-// #if defined(MBEDTLS_ECP_DP_CURVE25519_ENABLED)
-//     if (benchmark_ecdh_curve22519() != 0) {
-//         exit_code = MBEDTLS_EXIT_FAILURE;
-//     }
-// #endif /* MBEDTLS_ECP_DP_CURVE25519_ENABLED */
-// #endif /* MBEDTLS_ECDH_C */
+#if defined(MBEDTLS_ECP_DP_CURVE25519_ENABLED)
+    if (benchmark_ecdh_curve22519() != 0) {
+        exit_code = MBEDTLS_EXIT_FAILURE;
+    }
+#endif /* MBEDTLS_ECP_DP_CURVE25519_ENABLED */
+#endif /* MBEDTLS_ECDH_C */
 
     mbedtls_printf("DONE\n");
 
